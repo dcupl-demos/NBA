@@ -1,0 +1,22 @@
+{
+    "key": "Ranking",
+    "autoGenerateKey": true,
+    "references": [
+        {
+            "key": "TEAM_ID",
+            "model": "Team",
+            "type": "singleValued"
+        }
+    ],
+    "properties": [
+        {
+            "key": "CONFERENCE",
+            "type": "string"
+        },
+        {
+            "key": "TEAM",
+            "type": "string",
+            "filter":true
+        }
+    ]
+}

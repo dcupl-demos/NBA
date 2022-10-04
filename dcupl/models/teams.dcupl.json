@@ -1,0 +1,67 @@
+{
+    "key": "Team",
+    "keyProperty": "TEAM_ID",
+    "references": [
+
+    ],
+    "properties": [
+        {
+            "key": "LEAGUE_ID",
+            "type": "string"
+        },
+        {
+            "key": "ABBREVIATION",
+            "type": "string"
+        },
+        {
+            "key": "NICKNAME",
+            "type": "string",
+            "filter":true
+        },
+        {
+            "key": "YEARFOUNDED",
+            "type": "int",
+            "filter":true
+        },
+        {
+            "key": "MIN_YEAR",
+            "type": "int"
+        },
+        {
+            "key": "MAX_YEAR",
+            "type": "int"
+        },
+        {
+            "key": "CITY",
+            "type": "string",
+            "filter":true
+        },
+        {
+            "key": "ARENA",
+            "type": "string",
+            "filter":true
+        },
+        {
+            "key": "ARENACAPACITY",
+            "type": "int",
+            "filter":true
+        },
+        {
+            "key": "OWNER",
+            "type": "string"
+        },
+        {
+            "key": "GENERALMANAGER",
+            "type": "string"
+        },
+        {
+            "key": "HEADCOACH",
+            "type": "string",
+            "filter":true
+        },
+        {
+            "key": "DLEAGUEAFFILIATION",
+            "type": "string"
+        }
+    ]
+}

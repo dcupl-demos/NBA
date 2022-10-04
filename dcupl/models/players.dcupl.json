@@ -1,0 +1,23 @@
+{
+    "key": "Player",
+    "keyProperty": "PLAYER_ID",
+    "references": [
+        {
+            "key": "TEAM_ID",
+            "model": "Team",
+            "type": "singleValued"
+        }
+    ],
+    "properties": [
+        {
+            "key": "PLAYER_NAME",
+            "type": "string",
+            "filter":true
+        },
+        {
+            "key": "SEASON",
+            "type": "int",
+            "filter":true
+        }
+    ]
+}

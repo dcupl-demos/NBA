@@ -1,0 +1,41 @@
+{
+    "key": "Game",
+    "keyProperty": "GAME_ID",
+    "references": [
+        {
+            "key": "HOME_TEAM_ID",
+            "model": "Team",
+            "type": "singleValued"
+        },
+        {
+            "key": "VISITOR_TEAM_ID",
+            "model": "Team",
+            "type": "singleValued"
+        },
+        {
+            "key": "TEAM_ID_home",
+            "model": "Team",
+            "type": "singleValued"
+        },
+        {
+            "key": "TEAM_ID_away",
+            "model": "Team",
+            "type": "singleValued"
+        }
+    ],
+    "properties": [
+        {
+            "key": "SEASON",
+            "type": "int",
+            "filter":true
+        },
+        {
+            "key": "GAME_DATE_EST",
+            "type": "date"
+        },
+        {
+            "key": "GAME_STATUS_TEXT",
+            "type": "string"
+        }
+    ]
+}

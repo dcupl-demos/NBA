@@ -1,0 +1,50 @@
+{
+    "key": "GamesDetail",
+    "keyProperty": "GAME_ID",
+    "references": [
+        {
+            "key": "TEAM_ID",
+            "model": "Team",
+            "type": "singleValued"
+        },
+        {
+            "key": "PLAYER_ID",
+            "model": "Player",
+            "type": "singleValued"
+        }
+    ],
+    "properties": [
+        {
+            "key": "TEAM_ABBREVIATION",
+            "type": "string"
+        },
+        {
+            "key": "TEAM_CITY",
+            "type": "string",
+            "filter":true
+        },
+        {
+            "key": "PLAYER_NAME",
+            "type": "string",
+            "filter":true
+        },
+        {
+            "key": "NICKNAME",
+            "type": "string",
+            "filter":true
+        },
+        {
+            "key": "MIN",
+            "title": "Minutes",
+            "type": "string"
+        },
+        {
+            "key": "START_POSITION",
+            "type": "string"
+        },
+        {
+            "key": "COMMENT",
+            "type": "string"
+        }
+    ]
+}
