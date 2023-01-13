@@ -4,57 +4,52 @@
       "key": "NBA",
       "name": "NBA",
       "description": "NBA demo application with data from kaggle - https://www.kaggle.com/datasets/nathanlauga/nba-games",
-      "variables": [
-        {
-          "key": "apiUrl",
-          "value": "http://localhost:8083"
-        }
-      ]
+      "resourceTags": []
     }
   ],
   "resources": [
     {
-      "url": "${apiUrl}/models/games_details.dcupl.json",
+      "url": "${baseUrl}/models/games_details.dcupl.json",
       "type": "model"
     },
     {
-      "url": "${apiUrl}/models/games.dcupl.json",
+      "url": "${baseUrl}/models/games.dcupl.json",
       "type": "model"
     },
     {
-      "url": "${apiUrl}/models/players.dcupl.json",
+      "url": "${baseUrl}/models/players.dcupl.json",
       "type": "model"
     },
     {
-      "url": "${apiUrl}/models/ranking.dcupl.json",
+      "url": "${baseUrl}/models/ranking.dcupl.json",
       "type": "model"
     },
     {
-      "url": "${apiUrl}/models/teams.dcupl.json",
+      "url": "${baseUrl}/models/teams.dcupl.json",
       "type": "model"
     },
     {
-      "url": "${apiUrl}/data/games_2004_2020/games_details.csv",
+      "url": "${baseUrl}/data/games_2004_2020/games_details.csv",
       "type": "data",
       "model": "GamesDetail"
     },
     {
-      "url": "${apiUrl}/data/games_2004_2020/games.csv",
+      "url": "${baseUrl}/data/games_2004_2020/games.csv",
       "type": "data",
       "model": "Game"
     },
     {
-      "url": "${apiUrl}/data/games_2004_2020/players.csv",
+      "url": "${baseUrl}/data/games_2004_2020/players.csv",
       "type": "data",
       "model": "Player"
     },
     {
-      "url": "${apiUrl}/data/games_2004_2020/ranking.csv",
+      "url": "${baseUrl}/data/games_2004_2020/ranking.csv",
       "type": "data",
       "model": "Ranking"
     },
     {
-      "url": "${apiUrl}/data/games_2004_2020/teams.csv",
+      "url": "${baseUrl}/data/games_2004_2020/teams.csv",
       "type": "data",
       "model": "Team"
     }
