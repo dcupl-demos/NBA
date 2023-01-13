@@ -5,7 +5,6 @@
         "name": "NBA Teams Model",
         "description": "Entity \"Team\""
     },
-    "references": [],
     "properties": [
         {
             "key": "LEAGUE_ID",
