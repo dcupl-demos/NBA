@@ -2,7 +2,8 @@
   "applications": [
     {
       "key": "NBA",
-      "description": "NBA demo application",
+      "name": "NBA",
+      "description": "NBA demo application with data from kaggle - https://www.kaggle.com/datasets/nathanlauga/nba-games",
       "variables": [
         {
           "key": "apiUrl",

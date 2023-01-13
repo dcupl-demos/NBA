@@ -1,50 +1,273 @@
 {
     "key": "GamesDetail",
-    "keyProperty": "GAME_ID",
+    "autoGenerateKey": true,
+    "meta": {
+        "name": "GameDetail model",
+        "description": "Entity \"GamesDetail\" - detail information about the game stats"
+    },
     "references": [
+        {
+            "key": "GAME_ID",
+            "model": "Game",
+            "type": "singleValued",
+            "meta": {
+                "name": "Game ID",
+                "description": "Reference to Game based on the game's ID"
+            }
+        }, 
         {
             "key": "TEAM_ID",
             "model": "Team",
-            "type": "singleValued"
+            "type": "singleValued",
+            "meta": {
+                "name": "Team ID",
+                "description": "Reference to Team based on the team's ID"
+            }
         },
         {
             "key": "PLAYER_ID",
             "model": "Player",
-            "type": "singleValued"
+            "type": "singleValued",
+            "meta": {
+                "name": "Player ID",
+                "description": "Reference to Player based on the player's ID"
+            }
         }
     ],
-    "properties": [
+    "properties": [        
         {
-            "key": "TEAM_ABBREVIATION",
-            "type": "string"
+            "key":"TEAM_ABBREVIATION",
+            "type":"string",
+            "filter": true,
+            "meta":{
+                "name":"Team abbreviation",
+                "description":"Abbreviation of the team name"
+            }
         },
         {
-            "key": "TEAM_CITY",
-            "type": "string",
-            "filter":true
+            "key":"TEAM_CITY",
+            "type":"string",
+            "filter": true,
+            "meta":{
+                "name":"Team (Game) City",
+                "description":"City where the game was played"
+            }
         },
         {
-            "key": "PLAYER_NAME",
-            "type": "string",
-            "filter":true
+            "key":"PLAYER_NAME",
+            "type":"string",
+            "filter": true,
+            "meta":{
+                "name":"Player name",
+                "description":"Full name of the player"
+            }
         },
         {
-            "key": "NICKNAME",
-            "type": "string",
-            "filter":true
+            "key":"NICKNAME",
+            "type":"string",
+            "filter": true,
+            "meta":{
+                "name":"Nickname",
+                "description":"Nickname of the player"
+            }
         },
         {
-            "key": "MIN",
-            "title": "Minutes",
-            "type": "string"
+            "key":"START_POSITION",
+            "type":"string",
+            "filter": true,
+            "meta":{
+                "name":"Start position",
+                "description":""
+            }
         },
         {
-            "key": "START_POSITION",
-            "type": "string"
+            "key":"COMMENT",
+            "type":"string",
+            "filter": true,
+            "meta":{
+                "name":"Comment",
+                "description":"Comment"
+            }
         },
         {
-            "key": "COMMENT",
-            "type": "string"
+            "key":"MIN",
+            "type":"string",
+            "filter": true,
+            "meta":{
+                "name":"Minutes",
+                "description":"Minutes played"
+            }
+        },
+        {
+            "key":"FGM",
+            "type":"float",
+            "filter": true,
+            "meta":{
+                "name":"Field goals made",
+                "description":"Number of field goals made"
+            }
+        },
+        {
+            "key":"FGA",
+            "type":"float",
+            "filter": true,
+            "meta":{
+                "name":"Field goals attempted",
+                "description":"Number of field goals attempted"
+            }
+        },
+        {
+            "key":"FG_PCT",
+            "type":"float",
+            "filter": true,
+            "meta":{
+                "name":"Field goals percentage",
+                "description":"Percentage of successful field goals"
+            }
+        },
+        {
+            "key":"FG3M",
+            "type":"float",
+            "filter": true,
+            "meta":{
+                "name":"Three pointers made",
+                "description":"Number of three pointers made"
+            }
+        },
+        {
+            "key":"FG3A",
+            "type":"float",
+            "filter": true,
+            "meta":{
+                "name":"Three pointers attempted",
+                "description":"Number of three pointers attempted"
+            }
+        },
+        {
+            "key":"FG3_PCT",
+            "type":"float",
+            "filter": true,
+            "meta":{
+                "name":"Three pointers percentage",
+                "description":"Percentage of successful three pointers"
+            }
+        },
+        {
+            "key":"FTM",
+            "type":"float",
+            "filter": true,
+            "meta":{
+                "name":"Free throws made",
+                "description":"Number of free throws made"
+            }
+        },
+        {
+            "key":"FTA",
+            "type":"float",
+            "filter": true,
+            "meta":{
+                "name":"Free throws attempted",
+                "description":"Number of free throws attempted"
+            }
+        },
+        {
+            "key":"FT_PCT",
+            "type":"float",
+            "filter": true,
+            "meta":{
+                "name":"Free throws percentage",
+                "description":"Percentage of successful free throws"
+            }
+        },
+        {
+            "key":"OREB",
+            "type":"float",
+            "filter": true,
+            "meta":{
+                "name":"Offensive rebounds",
+                "description":"Number of offensive rebounds"
+            }
+        },
+        {
+            "key":"DREB",
+            "type":"float",
+            "filter": true,
+            "meta":{
+                "name":"Defensive rebounds",
+                "description":"Number of defensive rebounds"
+            }
+        },
+        {
+            "key":"REB",
+            "type":"float",
+            "filter": true,
+            "meta":{
+                "name":"Rebounds",
+                "description":"Number of rebounds"
+            }
+        },
+        {
+            "key":"AST",
+            "type":"float",
+            "filter": true,
+            "meta":{
+                "name":"Assists",
+                "description":"Number of assists"
+            }
+        },
+        {
+            "key":"STL",
+            "type":"float",
+            "filter": true,
+            "meta":{
+                "name":"Steals",
+                "description":"Number of steals"
+            }
+        },
+        {
+            "key":"BLK",
+            "type":"float",
+            "filter": true,
+            "meta":{
+                "name":"Blocks",
+                "description":"Number of blocked shots"
+            }
+        },
+        {
+            "key":"TO",
+            "type":"float",
+            "filter": true,
+            "meta":{
+                "name":"Turnover",
+                "description":"Number of turnovers"
+            }
+        },
+        {
+            "key":"PF",
+            "type":"float",
+            "filter": true,
+            "meta":{
+                "name":"Personnal foul",
+                "description":"Number of personnal fouls"
+            }
+        },
+        {
+            "key":"PTS",
+            "type":"float",
+            "filter": true,
+            "meta":{
+                "name":"Points",
+                "description":"Number of points scored by the player"
+            }
+        },
+        {
+            "key":"PLUS_MINUS",
+            "type":"float",
+            "filter": true,
+            "meta":{
+                "name":"Plus Minus",
+                "description":"Plus Minus"
+            }
         }
     ]
 }

@@ -1,22 +1,120 @@
 {
     "key": "Ranking",
     "autoGenerateKey": true,
+    "meta": {
+        "name": "NBA Team Ranking Model",
+        "description": "Entity \"Ranking\""
+    },
     "references": [
         {
             "key": "TEAM_ID",
             "model": "Team",
-            "type": "singleValued"
+            "type": "singleValued",
+            "meta": {
+                "name": "Team ID",
+                "description": "Reference to team based on the team ID"
+            }
         }
     ],
     "properties": [
         {
-            "key": "CONFERENCE",
-            "type": "string"
+            "key":"LEAGUE_ID",
+            "type": "string",
+            "filter": true,
+            "meta":{
+                "name":"League ID",
+                "description": "ID of the league (in this example only NBA and therefore 00"
+            }
         },
         {
-            "key": "TEAM",
+            "key":"SEASON_ID",
             "type": "string",
-            "filter":true
+            "filter": true,
+            "meta":{
+                "name":"Season ID",
+                "description":"ID of the season"
+            }
+        },
+        {
+            "key":"STANDINGSDATE",
+            "type": "string",
+            "filter": true,
+            "meta":{
+                "name":"Standings date",
+                "description":"Standings date"
+            }
+        },
+        {
+            "key":"CONFERENCE",
+            "type": "string",
+            "filter": true,
+            "meta":{
+                "name":"Conference",
+                "description":"Western or Eastern conference"
+            }
+        },
+        {
+            "key":"TEAM",
+            "type": "string",
+            "filter": true,
+            "meta":{
+                "name":"Team",
+                "description":"Name of the team"
+            }
+        },
+        {
+            "key":"G",
+            "type": "string",
+            "filter": true,
+            "meta":{
+                "name":"Games played",
+                "description":"Number of the games played on the season"
+            }
+        },
+        {
+            "key":"W",
+            "type": "string",
+            "filter": true,
+            "meta":{
+                "name":"Won games",
+                "description":"Number of the games won on the season"
+            }
+        },
+        {
+            "key":"L",
+            "type": "string",
+            "filter": true,
+            "meta":{
+                "name":"Lost games",
+                "description":"Number of the lost games on the season"
+            }
+        },
+        {
+            "key":"W_PCT",
+            "type": "string",
+            "filter": true,
+            "meta":{
+                "name":"Winning percentage",
+                "description":"Winning percentage"
+            }
+        },
+        {
+            "key":"HOME_RECORD",
+            "type": "string",
+            "filter": true,
+            "meta":{
+                "name":"Home record",
+                "description":"Home record on the season"
+            }
+        },
+        {
+            "key":"ROAD_RECORD",
+            "type": "string",
+            "filter": true,
+            "meta":{
+                "name":"Road record",
+                "description":"Away record on the season"
+            }
         }
     ]
 }

@@ -1,26 +1,46 @@
 {
     "key": "Game",
     "keyProperty": "GAME_ID",
+    "meta": {
+        "name": "Game model",
+        "description": "Entity \"Game\""
+    },
     "references": [
         {
             "key": "HOME_TEAM_ID",
             "model": "Team",
-            "type": "singleValued"
+            "type": "singleValued",
+            "meta": {
+                "name": "Home team ID",
+                "description": "ID of the home team"
+            }
         },
         {
             "key": "VISITOR_TEAM_ID",
             "model": "Team",
-            "type": "singleValued"
+            "type": "singleValued",
+            "meta": {
+                "name": "Visitor team ID",
+                "description": "ID of the visitor team"
+            }
         },
         {
             "key": "TEAM_ID_home",
             "model": "Team",
-            "type": "singleValued"
+            "type": "singleValued",
+            "meta": {
+                "name": "Team ID home",
+                "description": "ID of the home team (dupplicate of HOME_TEAM_ID)"
+            }
         },
         {
             "key": "TEAM_ID_away",
             "model": "Team",
-            "type": "singleValued"
+            "type": "singleValued",
+            "meta": {
+                "name": "Team ID away",
+                "description": "ID of the away team (dupplicate of VISITOR_TEAM_ID)"
+            }
         }
     ],
     "properties": [
@@ -31,11 +51,148 @@
         },
         {
             "key": "GAME_DATE_EST",
-            "type": "date"
+            "type": "date",
+            "meta": {
+                "name": "Game Date EST",
+                "description": "Game's date"
+            }
         },
         {
             "key": "GAME_STATUS_TEXT",
-            "type": "string"
+            "type": "string",
+            "meta": {
+                "name": "Game status",
+                "description": "Status - Final means that the game is completed"
+            }
+        },
+        {
+            "key":"HomeTeamNickname",
+            "type": "string",
+            "derive": {
+                "localReference": "HOME_TEAM_ID",
+                "remoteProperty": "NICKNAME"
+            },
+            "meta": {
+                "name": "Home Team Nickname",
+                "description": "Nickname of the home team, derived from model team"
+            }
+        },
+        {
+            "key":"VisitorTeamNickname",
+            "type": "string",
+            "derive": {
+                "localReference": "VISITOR_TEAM_ID",
+                "remoteProperty": "NICKNAME"
+            },
+            "meta": {
+                "name": "Visitor Team Nickname",
+                "description": "Nickname of the visiting team, derived from model team"
+            }
+        },
+        {
+            "key":"PTS_home",
+            "type": "int",
+            "meta":{
+                "name":"Points home team",
+                "description":"Number of points scored by home team"
+            }
+        },
+        {
+            "key":"FG_PCT_home",
+            "type": "float",
+            "meta":{
+                "name":"Field goal percentage home",
+                "description":"Field Goal Percentage home team"
+            }
+        },
+        {
+            "key":"FT_PCT_home",
+            "type": "float",
+            "meta":{
+                "name":"Free throw percentage home",
+                "description":"Free Throw Percentage of the home team"
+            }
+        },
+        {
+            "key":"FG3_PCT_home",
+            "type": "float",
+            "meta":{
+                "name":"Three point percentage home",
+                "description":"Three Point Percentage of the home team"
+            }
+        },
+        {
+            "key":"AST_home",
+            "type": "int",
+            "meta":{
+                "name":"Assists home",
+                "description":"Assists of the home team"
+            }
+        },
+        {
+            "key":"REB_home",
+            "type": "int",
+            "meta":{
+                "name":"Rebounds home",
+                "description":"Rebounds of the home team"
+            }
+        },
+        {
+            "key":"PTS_away",
+            "type": "float",
+            "meta":{
+                "name":"Points away team",
+                "description":"Number of points scored by away team"
+            }
+        },
+        {
+            "key":"FG_PCT_away",
+            "type": "float",
+            "meta":{
+                "name":"Field goal percentage away",
+                "description":"Field Goal Percentage away team"
+            }
+        },
+        {
+            "key":"FT_PCT_away",
+            "type": "float",
+            "meta":{
+                "name":"Free throw percentage away",
+                "description":"Free Throw Percentage of the away team"
+            }
+        },
+        {
+            "key":"FG3_PCT_away",
+            "type": "float",
+            "meta":{
+                "name":"Three point percentage away",
+                "description":"Three Point Percentage of the away team"
+            }
+        },
+        {
+            "key":"AST_away",
+            "type": "int",
+            "meta":{
+                "name":"Assists away",
+                "description":"Assists of the away team"
+            }
+        },
+        {
+            "key":"REB_away",
+            "type": "int",
+            "meta":{
+                "name":"Rebounds away",
+                "description":"Rebounds of the away team"
+            }
+        },
+        {
+            "key":"HOME_TEAM_WINS",
+            "type": "int",
+            "meta":{
+                "name":"Home team won",
+                "description":"1 if home team won the game"
+            }
         }
+
     ]
 }

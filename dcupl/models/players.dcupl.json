@@ -1,23 +1,82 @@
-{
+[
+  {
+    "key": "teamSection",
+    "model": "Player",
+    "type": "section",
+    "primaryAttribute": "TEAM_ID"
+  },
+  {
     "key": "Player",
     "keyProperty": "PLAYER_ID",
+    "meta": {
+      "name": "NBA Player Model",
+      "description": "Entity \"Player\""
+    },
     "references": [
-        {
-            "key": "TEAM_ID",
-            "model": "Team",
-            "type": "singleValued"
+      {
+        "key": "TEAM_ID",
+        "model": "Team",
+        "type": "singleValued",
+        "filter": {
+          "calculateFacets": true
+        },
+        "meta": {
+          "name": "Team ID",
+          "description": "Reference to the team based on the team ID"
         }
+      }
     ],
     "properties": [
-        {
-            "key": "PLAYER_NAME",
-            "type": "string",
-            "filter":true
-        },
-        {
-            "key": "SEASON",
-            "type": "int",
-            "filter":true
+      {
+        "key": "PLAYER_NAME",
+        "type": "string",
+        "filter": true,
+        "meta": {
+          "name": "Player name",
+          "description": "Name of the NBA player"
         }
+      },
+      {
+        "key": "SEASON",
+        "type": "int",
+        "filter": true,
+        "meta": {
+          "name": "Season",
+          "description": "NBA Season"
+        }
+      },
+      {
+        "key": "teamCity",
+        "type": "string",
+        "derive": {
+          "localReference": "TEAM_ID",
+          "remoteProperty": "CITY"
+        },
+        "filter": true,
+        "meta": {
+          "name": "Team city",
+          "description": "City of the team, derived from model team"
+        }
+      },
+      {
+        "key": "teamNickname",
+        "type": "string",
+        "derive": {
+          "localReference": "TEAM_ID",
+          "remoteProperty": "NICKNAME"
+        },
+        "filter": true,
+        "meta": {
+          "name": "Team nickname",
+          "description": "Nickname of the team, derived from model team"
+        }
+      },
+      {
+        "key": "teamFullname",
+        "type": "string",
+        "expression": "${teamCity} ${teamNickname}",
+        "filter": true
+      }
     ]
-}
+  }
+]

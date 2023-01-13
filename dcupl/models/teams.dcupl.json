@@ -1,67 +1,121 @@
 {
     "key": "Team",
     "keyProperty": "TEAM_ID",
-    "references": [
-
-    ],
+    "meta": {
+        "name": "NBA Teams Model",
+        "description": "Entity \"Team\""
+    },
+    "references": [],
     "properties": [
         {
             "key": "LEAGUE_ID",
-            "type": "string"
+            "type": "string",
+            "meta": {
+                "name": "League ID",
+                "description": "ID of the league (in this example only NBA and therefore 00"
+            }
         },
         {
             "key": "ABBREVIATION",
-            "type": "string"
+            "type": "string",
+            "meta": {
+                "name": "Abbreviation",
+                "description": "Abbreviation of the team name"
+            }
         },
         {
             "key": "NICKNAME",
             "type": "string",
-            "filter":true
+            "filter":true,
+            "meta": {
+                "name": "Nickname",
+                "description": "Team's nickname"
+            }
         },
         {
             "key": "YEARFOUNDED",
             "type": "int",
-            "filter":true
+            "filter":true,
+            "meta": {
+                "name": "Year founded",
+                "description": "Year of the foundation of the team"
+            }
         },
         {
             "key": "MIN_YEAR",
-            "type": "int"
+            "type": "int",
+            "meta": {
+                "name": "Minimum year",
+                "description": "Minimum year of the team in the NBA"
+            }
         },
         {
             "key": "MAX_YEAR",
-            "type": "int"
+            "type": "int",
+            "meta": {
+                "name": "Maximum year",
+                "description": "Maximum year of the team in the NBA"
+            }
         },
         {
             "key": "CITY",
             "type": "string",
-            "filter":true
+            "filter":true,
+            "meta": {
+                "name": "City",
+                "description": "Team's city"
+            }
         },
         {
             "key": "ARENA",
             "type": "string",
-            "filter":true
+            "filter":true,
+            "meta": {
+                "name": "Arena",
+                "description": "Team's stadium"
+            }
         },
         {
             "key": "ARENACAPACITY",
             "type": "int",
-            "filter":true
+            "filter":true,
+            "meta": {
+                "name": "Arena capacity",
+                "description": "Capacity of the arena of the team"
+            }
         },
         {
             "key": "OWNER",
-            "type": "string"
+            "type": "string",
+            "meta": {
+                "name": "Owner",
+                "description": "Name of the owner of the team (last one)"
+            }
         },
         {
             "key": "GENERALMANAGER",
-            "type": "string"
+            "type": "string",
+            "meta": {
+                "name": "General Manager",
+                "description": "Name of the general manager of the team (last one)"
+            }
         },
         {
             "key": "HEADCOACH",
             "type": "string",
-            "filter":true
+            "filter":true,
+            "meta": {
+                "name": "Headcoach",
+                "description": "Name of the headcoach of the team (last one)"
+            }
         },
         {
             "key": "DLEAGUEAFFILIATION",
-            "type": "string"
+            "type": "string",
+            "meta": {
+                "name": "League affiliation",
+                "description": "League affiliation"
+            }
         }
     ]
 }
