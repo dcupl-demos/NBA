@@ -40,7 +40,7 @@ The code for this example is available on Github - https://github.com/dcupl-demo
 Kaggle Dataset https://www.kaggle.com/datasets/nathanlauga/nba-games
 
 ## dcupl Derives & Expressions
-The players model ***derives some attributes*** and concatenates them using ***expressions*** (city + nickname => team's full name). In addition a section was defined for the players in order to group them by team.
+The players model ***derives some attributes*** and concatenates them using ***expressions*** (city + nickname => team's full name). In addition a section was defined for the players in order to group them by teams.
 
 ## DEV
 ### 1) Setup

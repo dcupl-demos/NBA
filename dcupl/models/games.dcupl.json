@@ -72,6 +72,7 @@
                 "localReference": "HOME_TEAM_ID",
                 "remoteProperty": "NICKNAME"
             },
+            "filter": true,
             "meta": {
                 "name": "Home Team Nickname",
                 "description": "Nickname of the home team, derived from model team"
@@ -84,6 +85,7 @@
                 "localReference": "VISITOR_TEAM_ID",
                 "remoteProperty": "NICKNAME"
             },
+            "filter": true,
             "meta": {
                 "name": "Visitor Team Nickname",
                 "description": "Nickname of the visiting team, derived from model team"
